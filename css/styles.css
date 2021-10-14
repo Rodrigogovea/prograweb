@@ -1,0 +1,271 @@
+:root{
+    --blanco:#ffffff;
+    --obscuro:#212121;
+    --primario:#ffc107;
+    --secundario:#0097a7;
+    --gris:#757575;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}  
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 1.6rem;
+    font-family: 'Krub', sans-serif;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+h1{
+    font-size: 2rem; 
+}
+h2{
+    text-align: center;
+}
+.encabezado{
+    font-size: 3rem;
+    color:var(--obscuro);
+    text-align: center;
+}
+h1 span{
+    font-size: 1rem;
+    color:var(--gris);
+    font-weight: 700;
+}
+ul{ /*unordered list*/
+    /*ol ordered list*/
+    list-style: none;
+}
+li{
+    /*por defecto el navegador asigna display:block;*/
+    display: inline;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    width: auto;
+    margin: 0 auto;
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+    /*cuando utilizo columnas*/
+    /*flex-direction: column;*/
+    /*align-items: flex-start|flex-end|center; */
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--obscuro);
+}
+
+.articulos{
+    /*contenedor = 100%*/
+    display: grid;
+    /*px|rem  |% | fr*/
+    
+    /*grid-template-rows: ;   esta propiedad la utlizamos cuando queremos usar filas*/
+}
+
+.articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulo h2{
+    color: var(--secundario);
+    font-weight: 700;
+}
+
+.articulo p{
+    text-align: center;
+    line-height: 2;
+}
+
+.articulo .iconos{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--primario);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    display: inline-block;
+}
+
+/*aside{
+    width: 10%;
+    float: right;
+}*/
+
+aside h2{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--gris);
+}
+
+aside p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--obscuro);
+    color: var(--blanco);
+}
+
+@media (min-width:768px){
+    .articulos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .navegacion-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+
+.cover{
+    background-image: url(../img/img_bkg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--blanco);
+    height: 218px;
+    position: relative;
+}
+
+.contenido-cover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    background-color: rgb(0 0 0 / 80%);
+    /*width: 20px;
+    height: 20px;*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-cover h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: var(--primario);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo-input{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: .5rem;
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--obscuro);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
